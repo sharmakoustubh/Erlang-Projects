@@ -1,0 +1,13 @@
+-module(add_module_tests).
+-export([run_all_test/0]).
+
+add_integer_test()->
+	10=add_module:add([1,2,3,4]).
+
+add_list_containing_negative_numbers_test()->
+	2=add_module:add([1,2,3,-4]).
+
+run_all_test()->
+	add_integer_test(),
+	add_list_containing_negative_numbers_test(),
+	ok.
