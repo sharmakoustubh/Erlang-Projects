@@ -1,0 +1,12 @@
+-module(add_module).
+-export([add/1 ]).
+
+add(L) ->
+       myadd(L,0).
+
+
+myadd([H|T],Acc)->
+	myadd(T,H+Acc);
+	
+myadd([],Acc) ->
+	      Acc.
