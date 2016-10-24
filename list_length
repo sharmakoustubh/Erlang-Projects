@@ -1,0 +1,8 @@
+-module(list_length).
+-export([list_length_func/1]).
+
+list_length_func(X)->
+    len(X).
+
+len([_|T])->1+len(T);
+len([])-> 0.
